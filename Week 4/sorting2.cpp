@@ -1,57 +1,12 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@saa27 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-AbdallahHemdan
-/
-Algorithmic-Toolbox-San-Diego
-4
-3433
- Code
- Issues 1
- Pull requests 0 Actions
- Projects 0
- Wiki
- Security 0
- Insights
-Algorithmic-Toolbox-San-Diego/week4_programming_challenges/3_improving_quicksort/sorting.cpp
-@AbdallahHemdan AbdallahHemdan Create sorting.cpp
-2bea76f on Jan 30, 2019
-69 lines (62 sloc)  1.23 KB
-  
-/*Author : Abdallah Hemdan */
-/***********************************************/
-/*
-   ___  ___
-* |\  \|\  \
-* \ \  \_\  \
-*  \ \   ___ \emdan
-*   \ \  \\ \ \
-*    \ \__\\ \_\
-*     \|__| \|__|
-*/
-
 #include <iostream>
 #include <cmath>
 #include <algorithm>
 #include <vector>
-//typedef   long long int               ll;
-
-//freopen("input.txt","r",stdin);
-//freopen("output.txt","w",stdout);
 
 using namespace std;
 pair<int, int> partition3(vector<int> &a, int l, int r) {
-	int x = a[l], m1;
+	int x = a[l];
+	int m1;
 	int j = l;
 	for (int i = l + 1; i <= r; i++) {
 		if (a[i] <= x) {
