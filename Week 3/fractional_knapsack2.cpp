@@ -11,7 +11,7 @@ int get_max_ratio_index(vector<int> weights,vector<int> values){
     for(int i=0; i<weights.size(); i++){
         if(weights[i] != 0 && (double)values[i]/weights[i] > max){
             max = (double)values[i]/weights[i];
-            max_i =i;
+            max_i =i; //2, 0
         }
     }
     return max_i;
@@ -24,10 +24,10 @@ double get_optimal_value(int capacity, vector<int> weights, vector<int> values) 
       if(capacity == 0)
         return value;
       int index = get_max_ratio_index(weights,values);
-      int a = capacity< weights[index] ? capacity: weights[index];
-      value += a* (double)values[index]/weights[index];
-      weights[index] -=a;
-      capacity -=a;
+      int a = capacity< weights[index] ? capacity: weights[index]; //30, capacity = 10
+      value += a* (double)values[index]/weights[index]; //value = 0+ 30*(120/30) = 120 , value = 0 + 10* 500/30
+      weights[index] -=a; // weights[2] = weights[2] - 30 = 0
+      capacity -=a; // capacity = 20
   }
 
   return value;
